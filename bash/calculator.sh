@@ -10,3 +10,7 @@ elif [ $2 == '-']
 then
 suma=$(($1 - $3))
 echo $suma
+elif [ $2 == '/']
+then
+suma=$(($1 / $3))
+echo $suma
