@@ -14,3 +14,7 @@ elif [ $2 == '/']
 then
 suma=$(($1 / $3))
 echo $suma
+else
+suma=$(($1*$3))
+echo $suma
+fi
