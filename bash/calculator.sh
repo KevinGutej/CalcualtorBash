@@ -1,20 +1,21 @@
 #!/bin/bash
 
-echo $1 $2 $3 '='
+echo "Wpisz 2 numberki: "
+read a
+read b
 
-if [ $2 == '+']
-then
-suma=$(($1 + $3))
-echo $suma
-elif [ $2 == '-']
-then
-suma=$(($1 - $3))
-echo $suma
-elif [ $2 == '/']
-then
-suma=$(($1 / $3))
-echo $suma
-else
-suma=$(($1*$3))
-echo $suma
-fi
+echo "Wpisz wybor :"
+echo "1. Dodawanie"
+echo "2. Odejmowanie"
+echo "3. Mnozenie"
+echo "4. Dzielenie"
+read wybor
+
+case $wybor in
+  1)res=`echo $a + $b`;
+  2)res=`echo $a - $b`;
+  3)res=`echo $a \* $b`;
+  4)res=`echo $a / $b`;
+esac
+
+echo "Result : $res"
